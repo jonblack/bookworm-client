@@ -1,0 +1,12 @@
+<div class="row">
+  <% for @book in @api.books.get.each %>
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+      <a href="/book/<%= @book.id %>">
+        <img src="http://www.placehold.it/150x225" alt="placeholder">
+      </a>
+      <a href="/book/<%= @book.id %>">
+        <p><%= @book.title %></p>
+      </a>
+    </div>
+  <% end %>
+</div>

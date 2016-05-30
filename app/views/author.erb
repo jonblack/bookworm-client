@@ -1,0 +1,33 @@
+<h3><%= @author.body['name'] %></h3>
+
+<div class="row">
+  <div class="col-md-2">
+    <img src="http://www.placehold.it/125x175" alt="placeholder">
+  </div>
+  <div class="col-md-10">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+  </div>
+</div>
+
+<br>
+
+<h4>Books</h4>
+
+<div class="row">
+  <% for @book in @author.books.each %>
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+      <a href="/book/<%= @book.id %>">
+        <img src="http://www.placehold.it/150x225" alt="placeholder">
+      </a>
+      <a href="/book/<%= @book.id %>">
+        <p><%= @book.title %></p>
+      </a>
+    </div>
+  <% end %>
+</div>

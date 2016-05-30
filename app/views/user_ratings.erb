@@ -1,0 +1,21 @@
+<h3><%= @user.username %>'s ratings</h3>
+
+<% if @user.ratings.get.ratings.length > 0 %>
+  <table class="table table-striped">
+    <tbody>
+      <% for @rating in @user.ratings.get.each %>
+        <tr>
+          <td class="col-md-10">
+            <a href="/book/<%= @rating.book.id %>">
+              <img src="http://www.placehold.it/75x100" alt="placeholder">
+              <%= @rating.book.title %>
+            </a>
+          </td>
+          <td class="col-md-2"><%= star_rating(@rating.score) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+    <p><%= @user.username %> hasn't rated any books yet.</p>
+<% end %>

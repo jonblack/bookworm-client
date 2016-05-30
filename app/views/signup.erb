@@ -1,0 +1,24 @@
+<div style="margin: 20%;">
+  <h3>Sign up</h3>
+  <br>
+
+  <% if flash[:signup_error] %>
+    <div class="alert alert-danger" role="alert">
+      <strong>Error: </strong> <%= flash[:signup_error] %>
+    </div>
+  <% end %>
+
+  <form action="/users/signup" method="post">
+    <fieldset class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" name="username" id="username"
+             placeholder="Enter username">
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" id="password"
+             placeholder="Enter password">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Sign up</button>
+  </form>
+</div>

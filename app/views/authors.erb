@@ -1,0 +1,12 @@
+<div class="row">
+  <% for @author in @api.authors.get.each %>
+    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+      <a href="/author/<%= @author.id %>">
+        <img class="card-img-top" src="http://www.placehold.it/150x225" alt="placeholder">
+      </a>
+      <a href="/author/<%= @author.id %>">
+        <p><%= @author.name %></p>
+      </a>
+    </div>
+  <% end %>
+</div>
