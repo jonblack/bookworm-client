@@ -46,7 +46,7 @@
             <%= star_rating(@rating.score) %>
           </td>
           <td class="col-md-10">
-            <a href="/user/<%= @rating.user.id %>">
+            <a href="/user/<%= @rating.user.id %>/ratings">
               <img src="http://www.placehold.it/32x32" alt="placeholder">
               <%= @rating.user.username %>
             </a>
