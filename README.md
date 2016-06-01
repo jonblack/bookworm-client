@@ -1,5 +1,5 @@
 `bookworm-client` is [Sinatra]() web application that implements the
-[`bookworm-api`][http://github.com/jonblack/bookworm-client] HAL API.
+[`bookworm-api`](http://github.com/jonblack/bookworm-client) HAL API.
 
 ![](scrot1.png)
 ![](scrot2.png)
